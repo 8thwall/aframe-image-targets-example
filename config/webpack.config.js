@@ -43,7 +43,7 @@ const makeSassLoader = () => ({
 const makeAssetLoader = () => ({
   test: /\..*$/,
   include: [path.join(srcPath, 'assets'), path.join(srcPath, 'targets')],
-  exclude: /\.(js|ts)$/,
+  exclude: /\.(js|ts|json)$/,
   loader: path.join(__dirname, 'asset-loader.js'),
 })
 
@@ -111,7 +111,10 @@ const config = {
       ],
     }),
   ],
-  resolve: {extensions: ['.ts', '.js']},
+  resolve: {
+    extensions: ['.ts', '.js'],
+    modules: [path.join(srcPath, 'targets'), 'node_modules'],
+  },
   module: {
     rules: [
       makeJsLoader(),
@@ -133,6 +136,14 @@ const config = {
       {
         directory: path.join(srcPath, 'targets'),
         publicPath: '/targets',
+      },
+      {
+        directory: path.join(srcPath, 'targets'),
+        publicPath: '/image-targets',
+      },
+      {
+        directory: path.join(srcPath, 'targets'),
+        publicPath: '/',
       },
       {
         directory: path.join(srcPath, 'assets'),
