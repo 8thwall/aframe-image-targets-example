@@ -10,18 +10,8 @@
   <script crossorigin="anonymous" src="../external/xrextras/xrextras.js"></script>
   <script crossorigin="anonymous" src="../external/landing-page/landing-page.js"></script>
   <script crossorigin="anonymous" src="../external/xr/xr.js" async="true" data-preload-chunks="slam"></script>
+  <script src="bundle.js"></script>
 
-  <script>
-    const onxrloaded = () => {
-      XR8.XrController.configure({
-        imageTargetData: [
-          require('targets/model-target.json'),
-          require('targets/video-target.json'),
-        ],
-      })
-    }
-    window.XR8 ? onxrloaded() : window.addEventListener('xrloaded', onxrloaded)
-  </script>
 
   <!-- Use "8thwall:" meta tags to hook into 8th Wall's build process and developer tools. -->
   <meta name="8thwall:renderer" content="aframe:1.5.0" />
