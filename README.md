@@ -25,23 +25,20 @@ https://8thwall.org/aframe-image-targets-example/
 
 ### Preparing Target Images
 
-Image targets can be generated using the interactive CLI too here: 
+Image targets can be generated using the interactive CLI tool: 
 
-1. `npx @8thwall/image-target-cli@latest`
+```bash
+npx @8thwall/image-target-cli@latest
+```
 
-Please see https://8thwall.org/docs/engine/guides/image-targets for additional information. 
+More information can be found here: https://github.com/8thwall/8thwall/blob/main/apps/image-target-cli/README.md
 
-You can also use the 8th Wall Desktop app to generate image targets, then copy them into this project to use them in A-Frame.
+You can also use the [8th Wall Desktop app](https://8thwall.org/downloads) to generate image targets, then copy them into this project to use them in A-Frame.
 
 ## Deployment
 
 This project contains Github Actions configuration for deployment to Github Pages, which triggers automatically by pushing the `main` branch. You can also create a production build using `npm run build`, which outputs the production build to the `dist` folder, and publish to the web using [this guide](https://8thwall.org/docs/getting-started/publishing#self-hosting-your-project).
 
-
 ## Questions?
 
 Please raise any questions on [Github Discussions](https://github.com/orgs/8thwall/discussions) or join the [Discord](https://8th.io/discord) to connect with the community.
-
----
-
-
