@@ -1,10 +1,18 @@
 # A-Frame: Image Targets
 
-This example uses image targets to display information about jellyfish on a flyer. It uses the xrextras-named-image-target component to connect an <a-entity> to an image target by name while the xrextras-play-video component enables video playback. 
+This example uses image targets to display information about jellyfish on a flyer. It uses the xrextras-named-image-target component to connect an <a-entity> to an image target by name while the xrextras-play-video component enables video playback.
 
-![artgallery-screenshot](./src/assets/screenshot-flyer.jpg)
+![Preview of the experience showing a printed flyer with a 3D jellyfish and playable video aligned to the graphics](./src/assets/screenshot-flyer.jpg)
 
-![flyer](./src/assets/flyer.jpg)
+<details><summary>Try it out</summary>
+
+https://8thwall.org/aframe-image-targets-example/
+
+<img alt="QR Code for the preview link" src="https://8th.io/qr?v=2&url=https://8thwall.org/aframe-image-targets-example/" width=250 height=250 />
+
+![Flyer design showing image targets](./src/assets/flyer.jpg)
+
+</details>
 
 ## Usage
 
@@ -15,14 +23,25 @@ This example uses image targets to display information about jellyfish on a flye
 5. To connect to a mobile device, follow [these instructions](https://8th.io/test-on-mobile)
 6. Recommended: Track your files using [git](https://git-scm.com/about) to avoid losing progress
 
+### Preparing Target Images
+
+Image targets can be generated using the interactive CLI too here: 
+
+1. `npx @8thwall/image-target-cli@latest`
+
+Please see https://8thwall.org/docs/engine/guides/image-targets for additional information. 
+
+You can also use the 8th Wall Desktop app to generate image targets, then copy them into this project to use them in A-Frame.
+
+## Deployment
+
+This project contains Github Actions configuration for deployment to Github Pages, which triggers automatically by pushing the `main` branch. You can also create a production build using `npm run build`, which outputs the production build to the `dist` folder, and publish to the web using [this guide](https://8thwall.org/docs/getting-started/publishing#self-hosting-your-project).
+
+
 ## Questions?
 
 Please raise any questions on [Github Discussions](https://github.com/orgs/8thwall/discussions) or join the [Discord](https://8th.io/discord) to connect with the community.
 
 ---
-
-### Preparing Target Images
-
-1. `npx @8thwall/image-target-cli@latest`
 
 

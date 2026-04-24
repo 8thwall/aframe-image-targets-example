@@ -1,7 +1,6 @@
 {
-  "name": "@8thwall/editor-build",
+  "name": "aframe-image-targets-example",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "build": "webpack --config config/webpack.config.js",
     "serve": "webpack-dev-server --mode=development --config config/webpack.config.js"
