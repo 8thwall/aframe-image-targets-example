@@ -6,11 +6,16 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
 
   <title>A-Frame: Image Targets Example</title>
-  <script crossorigin="anonymous" src="./external/scripts/8frame-1.5.0.min.js"></script>
+  <!-- No favicon, avoids a 404 error in the console. -->
+  <link rel="icon" href="data:,">
+
+  <script crossorigin="anonymous" src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
   
   <script src="https://cdn.jsdelivr.net/npm/@8thwall/engine-binary@1/dist/xr.js" async crossorigin="anonymous" data-preload-chunks="slam"></script>
   <script src="https://cdn.jsdelivr.net/npm/@8thwall/landing-page@1/dist/landing-page.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@8thwall/xrextras@1/dist/xrextras.js" crossorigin="anonymous"></script>
+  <!-- XRExtras built from 8thwall/8thwall packages/xrextras with A-Frame 1.8 support, until it is
+       released. Then: https://cdn.jsdelivr.net/npm/@8thwall/xrextras@2/dist/xrextras.js -->
+  <script src="./external/scripts/xrextras/xrextras.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <script src="bundle.js"></script>
