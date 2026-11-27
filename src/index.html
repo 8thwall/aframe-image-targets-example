@@ -6,16 +6,19 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
 
   <title>A-Frame: Image Targets Example</title>
-  <script crossorigin="anonymous" src="./external/scripts/8frame-1.5.0.min.js"></script>
+  <!-- No favicon, avoids a 404 error in the console. -->
+  <link rel="icon" href="data:,">
+
+  <script crossorigin="anonymous" src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
   
-  <script src="https://cdn.jsdelivr.net/npm/@8thwall/engine-binary@1/dist/xr.js" async crossorigin="anonymous" data-preload-chunks="slam"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@8thwall/engine-binary@2/dist/xr.js" async crossorigin="anonymous" data-preload-chunks="slam"></script>
   <script src="https://cdn.jsdelivr.net/npm/@8thwall/landing-page@1/dist/landing-page.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@8thwall/xrextras@1/dist/xrextras.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@8thwall/xrextras@2/dist/xrextras.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <script src="bundle.js"></script>
   <a-scene xrextras-gesture-detector landing-page xrextras-loading xrextras-runtime-error
-    renderer="colorManagement:true" xrweb="disableWorldTracking: true">
+    xrweb="disableWorldTracking: true">
 
     <a-assets>
       <!-- Credit to Poly by Google for the model: https://poly.google.com/view/dA5osnS0Rzj -->
@@ -28,9 +31,9 @@
     <a-camera position="0 4 10" raycaster="objects: .cantap" cursor="fuse: false; rayOrigin: mouse;">
     </a-camera>
 
-    <a-light type="directional" intensity="0.5" position="1 1 1"></a-light>
+    <a-light type="directional" intensity="1.57" position="1 1 1"></a-light>
 
-    <a-light type="ambient" intensity="1"></a-light>
+    <a-light type="ambient" intensity="3.14"></a-light>
 
     <!-- Note: "name:" must be set to the name of the image target -->
     <xrextras-named-image-target name="video-target">
